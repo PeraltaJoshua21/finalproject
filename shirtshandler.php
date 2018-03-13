@@ -4,7 +4,7 @@
 <form>
   <h2 style="text-align: center;"> LIST OF SHIRTS </h2>
   <hr />
-   <a class="btn btn-success" href="add.php" style="margin-left: 200px; margin-bottom: 20px;">Add Product</a>
+   
   <div class="container">
     <div class="table-responsive">
     <table class="table table-bordered table-hover table-striped" style="table-layout: relative">
@@ -13,7 +13,7 @@
         <tr>
             <th>Product ID</th>
             <th>Product Name</th>
-            <th>Product Image</th>
+            <th>Product Description</th>
             <th>Product Price</th>
             <th>Delete Product</th>
           
@@ -29,7 +29,7 @@
         {
             $prod_id=$row[0];
             $prod_name=$row[2];
-            $image=$row[3];
+            $prod_desc=$row[3];
             $price=$row[4];
           
          
@@ -38,7 +38,7 @@
         <tr>
             <td><?php echo $prod_id;  ?></td>
             <td><?php echo $prod_name;  ?></td>
-            <td><?php echo $image;  ?></td>
+            <td><?php echo $prod_desc;  ?></td>
             <td><?php echo $price;  ?></td>
 
             <td><a class="btn btn-danger" href="deleteshirts_handler.php?del=<?php echo $prod_id ?>">Delete Product</a></td> 
