@@ -13,10 +13,14 @@
                         <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
                             
                         <form class="form-horizontal" action="addhandler.php" method="POST"  enctype="multipart/form-data">
-                                    
+                             
+                             <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-file"></i></span>
+                                        <input type="text" class="form-control" name="prod_name"  placeholder="Product name" required>                                        
+                                    </div>             
                             
                             <div style="margin-bottom: 25px" class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
                                         <input type="text" class="form-control" name="prod_desc"  placeholder="Product Description" required>                                        
                                     </div>        
                                 
