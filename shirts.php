@@ -10,10 +10,10 @@ session_start();
            {  
                 $count = count($_SESSION["shopping_cart"]);  
                 $item_array = array(  
-                     'prod_id'             =>     $_GET["id"],  
-                     'prod_name'           =>     $_POST["hidden_name"],  
-                     'price'          =>     $_POST["hidden_price"],
-                     'qty'            =>     $_POST["quantity"]
+                     "prod_id"             =>     $_GET["id"],  
+                     "prod_name"           =>     $_POST["hidden_name"],  
+                     "price"          =>     $_POST["hidden_price"],
+                     "qty"            =>     $_POST["quantity"]
                 );  
                 $_SESSION["shopping_cart"][$count] = $item_array;  
            }  
@@ -26,11 +26,11 @@ session_start();
       else  
       {  
            $item_array = array(  
-                'prod_id'         =>     $_GET["id"],  
-                'prod_name'       =>     $_POST["hidden_name"],  
-                'price'      =>     $_POST["hidden_price"],
-                'qty'        =>     $_POST["quantity"] 
-           );  
+               "prod_id"             =>     $_GET["id"],  
+               "prod_name"           =>     $_POST["hidden_name"],  
+               "price"          =>     $_POST["hidden_price"],
+               "qty"            =>     $_POST["quantity"]
+           );   
            $_SESSION["shopping_cart"][0] = $item_array;  
       }  
  }  
@@ -59,6 +59,11 @@ session_start();
                 <h3 align="center">USC Shirts</h3><br />  
                 <?php  
                 $query = "SELECT * FROM product WHERE prod_type ='Shirts'";  
+                //Test to see if I got the customer id
+                //$customer_id = $_SESSION['cus_id'];
+                //echo $customer_id;
+                //$customer_name = $_SESSION['cus_name'];
+                //echo $customer_name;
                 $result = mysqli_query($db, $query);  
                 if(mysqli_num_rows($result) > 0)  
                 {  
