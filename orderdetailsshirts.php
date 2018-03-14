@@ -39,7 +39,6 @@
                           </tr>  
                           <?php  
                           }  
-                          $_SESSION['total_price'] = $total;
                           ?>  
                      </table>  
                 </div>  

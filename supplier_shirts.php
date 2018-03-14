@@ -49,6 +49,8 @@
 
         </tr>
       <?php }
+        //Start Global Variable to be passed in the pages for future use
+        $_SESSION['product_id'] = $prod_id;
        ?> 
     </table>
         </div>

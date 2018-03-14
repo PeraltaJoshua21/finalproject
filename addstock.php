@@ -1,7 +1,5 @@
 <?php
 include("headersupplier.php");
-//Start Global Variable to be passed in the pages for future use
-$_SESSION['product_id'] = $_GET['id'];
 ?>
 
 <div class="container">    
