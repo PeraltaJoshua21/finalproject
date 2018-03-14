@@ -4,6 +4,7 @@
 <form>
   <h2 style="text-align: center;"> LIST OF SHIRTS </h2>
   <hr />
+  <a class="btn btn-success" href="add.php" style="margin-left: 200px; margin-bottom: 20px;">Add Product</a>
   <div class="container">
     <div class="table-responsive">
     <table class="table table-bordered table-hover table-striped" style="table-layout: relative">
