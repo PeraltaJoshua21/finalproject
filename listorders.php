@@ -22,8 +22,7 @@
 
 <?php
         include("connect.php");
-        $view="SELECT order_id, fname .lname, contact_no, email, order_status FROM customer_order 
-        JOIN customer ON order_id = customer_id";
+        $view="SELECT * FROM customer_order";
         $run=mysqli_query($db,$view);
 
         while($row=mysqli_fetch_array($run))
@@ -32,7 +31,12 @@
             $complete_name=$row[1];
             $contact_no=$row[2];
             $email=$row[3];
-            $status=$row[4];
+
+            if ($row[7] == 0) {
+                $status = "Pending";
+            }else{
+                $status = "Approved";    
+            }          
           
          
         ?>
@@ -45,7 +49,7 @@
             <td><?php echo $status; ?></td>
     
 
-            <td><a class="btn btn-danger" href="approveorder_handler.php?del=<?php echo $item_id ?>">Approve Order</a></td> 
+            <td><a class="btn btn-danger" href="approveorder_handler.php?prod_id=<?php echo $item_id ?>">Approve Order</a></td> 
         </tr>
       <?php } ?> 
     </table>

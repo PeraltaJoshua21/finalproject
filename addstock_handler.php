@@ -8,7 +8,7 @@ if(isset($_POST['addStock']));
 	{		
 		//echo $supplier_username;
 		//echo "</br>";
-		//echo $called_id;
+		echo $called_id;
 		//echo "</br>";
 
 		//Get supplier ID from supplier table
@@ -50,8 +50,8 @@ if(isset($_POST['addStock']));
 				
 	}
 
-	echo "<script>alert('Stocks added!')
-			window.location='supplierhome.php'</script>";
+	//echo "<script>alert('Stocks added!')
+	//		window.location='supplierhome.php'</script>";
 
 
 ?>
